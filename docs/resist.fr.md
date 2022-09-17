@@ -22,7 +22,7 @@ Cet outil contient du code javascript GPLv2 de Claudio Girardi (trouvé [ici](ht
 <div class="w3-row-padding" style="padding-left: 0px;">
   <div class="w3-third">
     <label>&nbsp;</label>
-    <div><button class="w3-button w3-theme" onclick="CalcRes();">Calculer</button></div>
+    <div><button class="w3-button w3-theme-l1 w3-hover-theme" onclick="CalcRes();">Calculer</button></div>
   </div>
 </div>
 

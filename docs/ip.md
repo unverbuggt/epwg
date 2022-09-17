@@ -1,71 +1,71 @@
-title: What's my IP Address?
+title: Wie lautet meine IP Adresse?
 
 <p>
   <strong class="w3-large">IPv6:</strong> 
-  <code class="w3-large" id="ip6" onclick="copyToClipboard('ip6');" style="cursor: copy;">Loading...</code>
+  <code class="w3-large" id="ip6" onclick="copyToClipboard('ip6');" style="cursor: copy;">lädt...</code>
 </p>
 <p>
   <strong class="w3-large">IPv4:</strong> 
-  <code class="w3-large" id="ip4" onclick="copyToClipboard('ip4');" style="cursor: copy;">Loading...</code>
+  <code class="w3-large" id="ip4" onclick="copyToClipboard('ip4');" style="cursor: copy;">lädt...</code>
 </p>
 <div>
-  <strong>Location:</strong>
+  <strong>Standort:</strong>
   <span id="iploc"></span>
 </div>
 <div class="w3-small">
-  <strong>ISP:</strong>
+  <strong>Anbieter:</strong>
   <span id="ipasn"></span>
 </div>
 
 
-*inspired by:* Because any other "Whats my IP?"-tool sucks. [Host yourself :3](https://git.clerie.de/clerie/ip.clerie.de){ target="_blank" }
+*inspiriert von:* Weil alle anderen "What's my IP?" Seiten Mist sind. [Host yourself :3](https://git.clerie.de/clerie/ip.clerie.de){ target="_blank" }
 {: .w3-small }
 
-This product includes GeoLite2 data created by MaxMind, available from [https://www.maxmind.com](https://www.maxmind.com){ target="_blank" }
+Dieser Dienst verwendet die GeoLite2 Datenbank von MaxMind, erhältlich unter [https://www.maxmind.com](https://www.maxmind.com){ target="_blank" }
 {: .w3-small }
 
-## How does it know my IP address?
+## Woher kennt es meine IP Adresse?
 
-When you surf the Internet the name of a website is resolved to an 
-[IP address](https://en.wikipedia.org/wiki/IP_address){ target="_blank" }
-via [DNS](https://en.wikipedia.org/wiki/Domain_Name_System){ target="_blank" }.
-This address is needed to establish a connection to the web server of the site.
-It also explicitly identifies your Internet access.
+Wenn man im Internet surft wird über 
+[DNS Abfragen](https://de.wikipedia.org/wiki/Domain_Name_System){ target="_blank" } der Name einer Webseite in eine
+[IP Adresse](https://de.wikipedia.org/wiki/IP-Adresse){ target="_blank" } umgewandelt.
+Diese Adresse ist notwendig um eine Verbindung zu dem Webserver der Seite herzustellen, sie kann den
+Internetzugang aber auch eindeutig identifizieren.
 
-In doing so the browser asks a DNS Server for the address. The answer will be either an
-[IPv4](https://en.wikipedia.org/wiki/IPv4){ target="_blank" } or [IPv6](https://en.wikipedia.org/wiki/IPv6){ target="_blank" }
-address or both (so the browser will connect to the website via it's preferred protocol).
+Dabei fragt der Browser einen DNS Server nach der Adresse und bekommt als Antwort entweder eine
+[IPv4](https://de.wikipedia.org/wiki/IPv4){ target="_blank" } oder [IPv6](https://de.wikipedia.org/wiki/IPv6){ target="_blank" }
+oder beides (dann entscheidet der Browser welches Protokoll er bevorzugt).
 
-I configured [wie-lautet-ip4.epwg.de](https://wie-lautet-ip4.epwg.de){ target="_blank" } to just return
-an IPv4 address via DNS request. For this reason the connection will be established solely via IPv4.
-The server knows the client's IP when the connection is established.
-In contrast at [wie-lautet-ip6.epwg.de](https://wie-lautet-ip6.epwg.de){ target="_blank" }
-this applies to IPv6 only.
+Ich habe [wie-lautet-ip4.epwg.de](https://wie-lautet-ip4.epwg.de){ target="_blank" } so eingestellt,
+dass nur eine IPv4 zurückgeliefert wird. Deshalb stellt der Browser die Verbindung auch rein über IPv4 her. 
+Der Server kennt die IP des Clients sobald eine Verbindung mit ihm aufgebaut wird.
+Bei [wie-lautet-ip6.epwg.de](https://wie-lautet-ip6.epwg.de){ target="_blank" } 
+wird dagegen die Verbindung rein auf IPv6 gezwungen.
 
-It could be that only one of the fields will show a number. If you use an old operating system or old devices at your Internet
-connection then probably only IPv4 will work and some mobile conneciton will only return IPv6 or rather many clients will
-share the same IPv4.
+Es kann sein, dass nur eine der beiden Felder eine IP Adresse anzeigt. Wenn z.B. alte Betriebssysteme oder Netzwerkgeräte für 
+den Internetzugang verwendet werden funktioniert u. U. nur IPv4 und bei einigen Mobilfunkzugängen kann es sein, dass nur IPv6
+funktioniert oder dieselbe IPv4 für mehrere Nutzer verwendet wird. 
 
-## How does it know my approximate location?
+## Wie kann es wissen wo ich ungefähr bin?
 
-First of all: your data isn't shared with any third party here.
+Zuallererst: Deine Daten werden hier mit keinem Drittanbieter geteilt.
 
-This server runs a database which contains location and
-ISP data  according to IP address ranges. You can get them for free or as paid version (with supposedly increased accuracy)
-from some vendors. This information is normally used to preset you with more local ads or
-[Geo-blocking](https://en.wikipedia.org/wiki/Geo-blocking){ target="_blank" }.
+Auf der Server läuft eine Datenbank die den Ort und
+Providerdaten in Abhängigkeit von IP Adressbereichen enthält. Solche Datenbanken kann man von verschiedenen Anbietern als
+kostenlose oder als Bezahlversion (mit angeblich erhöhter Genauigkeit) beziehen. Diese Informationen werden normalerweise
+für [Geoblocking](https://de.wikipedia.org/wiki/Geoblocking){ target="_blank" } verwendet oder um lokale Werbung anzuzeigen.
 
-## What can I do about this?
+## Was kann ich dagegen tun?
 
-Simply use [tor](https://www.torproject.org/download/){ target="_blank" }.
+Nutze einfach [tor](https://www.torproject.org/de/download/){ target="_blank" }.
 
-All data without guarantee.
+Alle Angaben ohne Gewähr.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>
-var lang = "en";
-var sErr404 = "error: internal error.";
-var sErr = "error: couldn't retrieve IP.";
+var lang = "de";
+var sErr404 = "Fehler: Interner Fehler.";
+var sErr = "Fehler: Konnte IP nicht abrufen.";
 
 function copyToClipboard(id) {
   let ip = document.getElementById(id);

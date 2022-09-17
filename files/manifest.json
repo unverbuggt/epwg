@@ -1,5 +1,5 @@
 {
-    "name": "epwg.de tools",
+    "name": "epwg.de Tools",
     "short_name" : "tools",
     "start_url": "index.html",
     "scope" : "./",

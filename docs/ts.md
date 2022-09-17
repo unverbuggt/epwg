@@ -1,4 +1,4 @@
-title: Decode timestamp
+title: Timestamp dekodieren
 
 <div class="w3-row-padding" style="padding-left: 0px;">
   <div class="w3-third">
@@ -6,27 +6,27 @@ title: Decode timestamp
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" name="timestamp" id="timestamp" type="number" min="0" max="4294967295" onchange="genTs();">
   </div>
   <div class="w3-third">
-    <label for="offset">Offset (Hours)</label>
+    <label for="offset">Offset (Stunden)</label>
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" name="offset" id="offset" type="number" min="-12" max="12" onchange="genTs();">
   </div>
 </div>
 
 <div class="w3-row-padding w3-margin-top" style="padding-left: 0px;">
   <div class="w3-third">
-    <label for="ts-utc-iso">ISO format</label>
+    <label for="ts-utc-iso">ISO Format</label>
     <pre style="margin-top: 0px !important;"><code id="ts-utc-iso" name="ts-utc-iso" onclick="copyToClipboard('ts-utc-iso');" style="cursor: copy;"></code></pre>
   </div>
   <div class="w3-third">
-    <label for="ts-utc">Localized format (UTC)</label>
+    <label for="ts-utc">Lokalisiertes Format (UTC)</label>
     <pre style="margin-top: 0px !important;"><code id="ts-utc" name="ts-utc" onclick="copyToClipboard('ts-utc');" style="cursor: copy;"></code></pre>
   </div>
   <div class="w3-third">
-    <label for="ts-local">Localized format (Local time)</label>
+    <label for="ts-local">Lokalisiertes Format (Lokalzeit)</label>
     <pre style="margin-top: 0px !important;"><code id="ts-local" name="ts-local" onclick="copyToClipboard('ts-local');" style="cursor: copy;"></code></pre>
   </div>
 </div>
 
-All data without guarantee.
+Alle Angaben ohne Gewähr.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>

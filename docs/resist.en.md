@@ -1,38 +1,38 @@
-title: Widerstandskombination berechnen
+title: Calculate combination of resistance
 
-Dieses Tool enthält GPLv2 Javascript Code von Claudio Girardi (gefunden [hier](https://www.qsl.net/in3otd/parallr.html){ target="_blank" }).
+This tool includes GPLv2 javascript code from Claudio Girardi found [here](https://www.qsl.net/in3otd/parallr.html){ target="_blank" }.
 {: .w3-container .w3-small style="padding-left: 8px;"}
 
 <div class="w3-row-padding" style="padding-left: 0px;">
   <div class="w3-third">
-    <label for="rslist">Für die Berechnungen zu verwendende Widerstandsreihe:</label>
+    <label for="rslist">Resistor series to use for the calculations:</label>
     <select class="w3-select w3-border w3-theme-l1" name="rslist" id="rslist" onchange="select_series();">
-      <option value="6">E6 Reihe</option>
-      <option value="12" selected>E12 Reihe</option>
-      <option value="24">E24 Reihe</option>
-      <option value="48">E48 Reihe</option>
-      <option value="96">E96 Reihe</option>
+      <option value="6">E6 series</option>
+      <option value="12" selected>E12 series</option>
+      <option value="24">E24 series</option>
+      <option value="48">E48 series</option>
+      <option value="96">E96 series</option>
     </select>
   </div>
   <div class="w3-third">
-    <label for="rd">Gewünschter Widerstand R (Ohm):</label>
+    <label for="rd">Desired resistance R (Ohm):</label>
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" type="number" name="rd" id="rd" value="235">
   </div>
 </div>
 <div class="w3-row-padding" style="padding-left: 0px;">
   <div class="w3-third">
     <label>&nbsp;</label>
-    <div><button class="w3-button w3-theme" onclick="CalcRes();">Berechnen</button></div>
+    <div><button class="w3-button w3-theme-l1 w3-hover-theme" onclick="CalcRes();">Calculate</button></div>
   </div>
 </div>
 
 
 <div class="w3-container w3-margin-top" style="padding-left: 8px;">
-  <label>R1 (+ seriell, || parallel) R2 = R</label>
+  <label>R1 (+ serial, || parallel) R2 = R (failure)</label>
   <div><pre style="margin-top: 0px !important;"><code id="texta"></code></pre></div>
 </div>
 
-Alle Angaben ohne Gewähr.
+All data without guarantee.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>

@@ -1,23 +1,23 @@
-title: epwg.de tools
+title: epwg.de Tools
 
-This is a collection of tools that I always had to search the web for, because I didn't bookmark them.
-If possible they do their job within the web browser, leaving no information on this server.
-More tools to come...
+Dies ist eine Sammlung von Tools, nach denen ich immer im Internet suchen musste, weil ich sie nicht mit einem Lesezeichen versehen hatte.
+Wenn möglich, erledigen sie ihre Arbeit im Webbrowser und hinterlassen keine Informationen auf diesem Server.
+Weitere Tools folgen...
 
-[Version française](fr/){ .w3-btn .w3-theme .w3-margin-bottom }
-[Deutsche Version](de/){ .w3-btn .w3-theme .w3-margin-bottom }
+[Version française](fr/){ .w3-button .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[English version](en/){ .w3-button .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 
-## Informatics
+## Informatik
 
-[What's my IP Address](ip/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
-[Good password generator](dice/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
-[Decode timestamp](ts/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
+[Wie lautet meine IP Adresse?](ip/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[Guter Passwortgenerator](dice/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[Timestamp dekodieren](ts/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 
-## Astronomy
+## Astronomie
 
-[When will the sun rise?](sun/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
+[Wann geht die Sonne auf?](sun/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 
-## Electrical engineering
+## Elektrotechnik
 
-[Calculate combination of resistance](resist/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
-[Resistance of a conductor](wire/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
+[Widerstandskombination berechnen](resist/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[Widerstand einer Leitung](wire/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }

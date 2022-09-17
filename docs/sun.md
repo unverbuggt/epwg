@@ -1,15 +1,15 @@
-title: When will the sun rise?
+title: Wann geht die Sonne auf?
 
-This tool contains code from [oscat](http://oscat.de/){ target="_blank" } (translated to javascript).
+Dieses Tool enthält Code aus [oscat](http://oscat.de/){ target="_blank" } (übersetzt in Javascript).
 {: .w3-container .w3-small style="padding-left: 8px;"}
 
-<div class="w3-row-padding" style="padding-left: 0px;">
+<div class="w3-row-padding"  style="padding-left: 0px;">
   <div class="w3-third">
-    <label for="latitude">Latitude (° / N+ / S-)</label>
+    <label for="latitude">Breitengrad (° / N+ / S-)</label>
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" type="number" name="latitude" id="latitude" onchange="getOSMLink();">
   </div>
   <div class="w3-third">
-    <label for="longitude">Longitude (° / W+ / E-)</label>
+    <label for="longitude">Längengrad (° / W+ / O-)</label>
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" type="number" name="longitude" id="longitude" onchange="getOSMLink();">
   </div>
   <div class="w3-third">
@@ -27,7 +27,7 @@ This tool contains code from [oscat](http://oscat.de/){ target="_blank" } (trans
 
 <div class="w3-row-padding w3-margin-top" style="padding-left: 0px;">
   <div class="w3-third">
-    <label for="day">Day</label>
+    <label for="day">Tag</label>
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" type="date" id="day" name="day" onchange="calcSun();">
   </div>
 </div>
@@ -38,30 +38,30 @@ This tool contains code from [oscat](http://oscat.de/){ target="_blank" } (trans
   <div class="w3-third" id="sun-day-length">&nbsp;</div>
 </div>
 
-All data without guarantee.
+Alle Angaben ohne Gewähr.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>
-var sGetLocation = "Get location";
-var sGettingLocation = "Getting location...";
-var sError = "Error: ";
-var sErrUnknown = "Unknown error.";
-var sErrPermission = "Permission denied.";
-var sErrNoPosition = "Position unavailable.";
-var sErrTimeout = "Timed out. (Try getting a fixed position first)";
+var sGetLocation = "Standort ermitteln";
+var sGettingLocation = "Suche Standort...";
+var sError = "Fehler: ";
+var sErrUnknown = "Unbekannter Fehler.";
+var sErrPermission = "Zugriff verweigert.";
+var sErrNoPosition = "Position nicht verfügbar.";
+var sErrTimeout = "Zeitüberschreitung. (Am besten vorher feste Position ermitteln)";
 var sOSMLink = "OpenStreetMap Link";
-var sCouldntCalc = "Couldn't calculate. Please check input.";
-var sSunrise = "Sunrise: ";
-var sSunset = "Sunset: ";
-var sMidday = "Midday: ";
-var sDayLength = "Day length: ";
-var sTwilight = "Twilight: ";
-var sDeclination = "Declination: ";
-var sLocal = "Local time of system";
-var sUTC = "UTC timezon";
-var sMisc = "Miscellaneous";
-var sErrLati = "This only works for a latitude between 65°N to 65°S.";
-var sErrInvDate = "Invalid day.";
+var sCouldntCalc = "Konnte nicht berechnet werden. Bitte Eingabe prüfen.";
+var sSunrise = "Sonnenaufgang: ";
+var sSunset = "Sonnenuntergang: ";
+var sMidday = "Mittag: ";
+var sDayLength = "Tageslänge: ";
+var sTwilight = "Dämmerung: ";
+var sDeclination = "Deklination: ";
+var sLocal = "Ortszeit des Systems";
+var sUTC = "UTC Zeitzone";
+var sMisc = "Verschiedenes";
+var sErrLati = "Es kann nur zwischen 65° nördlicher oder südlicher Breite berechnet werden.";
+var sErrInvDate = "Ungültiger Tag.";
 
 //
 var latitude = document.getElementById('latitude');
@@ -94,7 +94,7 @@ if (day.value == '') { //set to next day if unset
 
 // check for Geolocation support
 if (navigator.geolocation) {
-  get_location.innerHTML = '<button class="w3-button w3-theme" onclick="getLocation();">' + sGetLocation + '</button>';
+  get_location.innerHTML = '<button class="w3-button w3-theme-l1 w3-hover-theme" onclick="getLocation();">' + sGetLocation + '</button>';
 }
 
 

@@ -11,47 +11,45 @@ theme:
 
 nav:
     - 'index.md'
-    - Informatics:
+    - Informatik:
       - 'dice.md'
       - 'ip.md'
       - 'ts.md'
-    - Astronomy:
+    - Astronomie:
       - 'sun.md'
-    - Electrical engineering:
+    - Elektrotechnik:
       - 'resist.md'
       - 'wire.md'
 
 plugins:
   - i18n:
-      default_language: en
+      default_language: de
       default_language_only: false
       docs_structure: suffix
       languages:
         default:
-          name: English
+          name: Deutsch
           build: true
+          site_name: "epwg.de Tools"
         fr:
           name: Français
           build: true
           site_name: "l'outils epwg.de"
-        de:
-          name: Deutsch
+        en:
+          name: English
           build: true
-          site_name: "epwg.de Tools"
+          site_name: "epwg.de tools"
       nav_translations:
         fr:
-          Informatics: Informatique
-          Astronomy: Astronomie
-          Electrical engineering: Électrotechnique
-        de:
-          Informatics: Informatik
-          Astronomy: Astronomie
-          Electrical engineering: Elektrotechnik
-  #- mkdocs-simple-hooks:
-  #    hooks:
-  #        on_files: "add_files:on_files"
+          Informatik: Informatique
+          Astronomie: Astronomie
+          Elektrotechnik: Électrotechnique
+        en:
+          Informatik: Informatics
+          Astronomie: Astronomy
+          Elektrotechnik: Electrical engineering
   - color-theme:
-      theme_color: '#FFFF00'
+      theme_color: '#FF9933'
 
 
 markdown_extensions:

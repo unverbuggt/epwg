@@ -92,7 +92,7 @@ function changeWordlist() {
       }
       wordlist_info.innerHTML = '<a href="' + dwinfo[2] + '" target="_blank">' + sSource + '</a>';
       words_slider.style.display = "block";
-      generate_button.innerHTML = '<button class="w3-btn w3-round-xlarge w3-theme w3-margin-bottom" onClick="generatePassword();">' + sGenerate + '</button>';
+      generate_button.innerHTML = '<button class="w3-button w3-round-xlarge w3-theme-l1 w3-hover-theme w3-margin-bottom" onClick="generatePassword();">' + sGenerate + '</button>';
       dicttype = dwinfo[1];
       if (dicttype == 'd5') { //d5: five rolls of dice per word
         words_slider.value = 6;

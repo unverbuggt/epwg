@@ -94,7 +94,7 @@ if (day.value == '') { //set to next day if unset
 
 // check for Geolocation support
 if (navigator.geolocation) {
-  get_location.innerHTML = '<button class="w3-button w3-theme" onclick="getLocation();">' + sGetLocation + '</button>';
+  get_location.innerHTML = '<button class="w3-button w3-theme-l1 w3-hover-theme" onclick="getLocation();">' + sGetLocation + '</button>';
 }
 
 
