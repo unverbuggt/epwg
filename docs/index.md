@@ -1,0 +1,23 @@
+title: epwg.de tools
+
+This is a collection of tools that I always had to search the web for, because I didn't bookmark them.
+If possible they do their job within the web browser, leaving no information on this server.
+More tools to come...
+
+[Version française](fr/){ .w3-btn .w3-theme .w3-margin-bottom }
+[Deutsche Version](de/){ .w3-btn .w3-theme .w3-margin-bottom }
+
+## Informatics
+
+[What's my IP Address](ip/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
+[Good password generator](dice/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
+[Decode timestamp](ts/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
+
+## Astronomy
+
+[When will the sun rise?](sun/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
+
+## Electrical engineering
+
+[Calculate combination of resistance](resist/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }
+[Resistance of a conductor](wire/){ .w3-btn .w3-round-xlarge .w3-theme .w3-margin-bottom }

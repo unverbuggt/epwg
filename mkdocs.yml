@@ -1,0 +1,58 @@
+site_name: epwg.de tools
+site_url: https://epwg.de
+site_author: René Rüthlein
+
+theme:
+    name: w3csstheme
+    manifest: manifest.json
+    serviceworker: service-worker.js
+    custom_dir: files/
+    logo: img/logo.svg
+
+nav:
+    - 'index.md'
+    - Informatics:
+      - 'dice.md'
+      - 'ip.md'
+      - 'ts.md'
+    - Astronomy:
+      - 'sun.md'
+    - Electrical engineering:
+      - 'resist.md'
+      - 'wire.md'
+
+plugins:
+  - i18n:
+      default_language: en
+      default_language_only: false
+      docs_structure: suffix
+      languages:
+        default:
+          name: English
+          build: true
+        fr:
+          name: Français
+          build: true
+          site_name: "l'outils epwg.de"
+        de:
+          name: Deutsch
+          build: true
+          site_name: "epwg.de Tools"
+      nav_translations:
+        fr:
+          Informatics: Informatique
+          Astronomy: Astronomie
+          Electrical engineering: Électrotechnique
+        de:
+          Informatics: Informatik
+          Astronomy: Astronomie
+          Electrical engineering: Elektrotechnik
+  #- mkdocs-simple-hooks:
+  #    hooks:
+  #        on_files: "add_files:on_files"
+  - color-theme:
+      theme_color: '#FFFF00'
+
+
+markdown_extensions:
+    - attr_list
