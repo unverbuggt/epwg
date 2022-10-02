@@ -164,10 +164,10 @@ function calcLosses() {
   eio_vpercent_drop.selectedIndex = 0;
   
   eo_wire_losses.textContent = 
-    (voltage_drop * current).toLocaleString(navigator.language, {maximumFractionDigits: 0});
+    (wireResistance * current * current).toLocaleString(navigator.language, {maximumFractionDigits: 0});
 
   eo_wire_losses_perm.textContent = 
-    (voltage_drop * current / wire_length).toLocaleString(navigator.language, {maximumFractionDigits: 0});
+    (wireResistance * current * current / wire_length).toLocaleString(navigator.language, {maximumFractionDigits: 0});
   
   setHash();
 }
