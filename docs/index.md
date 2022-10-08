@@ -1,6 +1,6 @@
 title: epwg.de Tools
 
-Dies ist eine Sammlung von Tools, nach denen ich immer im Internet suchen musste, weil ich sie nicht mit einem Lesezeichen versehen hatte.
+Dies ist eine Sammlung von Tools. Viel Spaß damit.
 Wenn möglich, erledigen sie ihre Arbeit im Webbrowser und hinterlassen keine Informationen auf diesem Server.
 Weitere Tools folgen...
 

@@ -50,7 +50,9 @@ plugins:
           Elektrotechnik: Electrical engineering
   - color-theme:
       theme_color: '#FF9933'
-
+  - w3css-classes: {}
+  - search:
+      lang: de
 
 markdown_extensions:
     - attr_list

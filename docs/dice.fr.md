@@ -68,7 +68,7 @@ let defaultOption = document.createElement('option');
 defaultOption.text = 'Sélectionnez la liste de mots';
 defaultOption.setAttribute('disabled', 'disabled');
 
-var dicepath = "../../dice/";
+var dicepath = base_url+"/dice/";
 </script>
 
 <script type="text/javascript" src="../../dice/dice.js"></script>

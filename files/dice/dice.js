@@ -166,7 +166,7 @@ function generatePassword() {
   text_dicerolls.innerHTML = sDiceRolls;
   result_dicerolls.innerHTML = all_dicerolls;
   text_password.innerHTML = sPasswords;
-  result_password.innerHTML = '<pre>' + all_password + '</pre>';
+  result_password.innerHTML = '<pre class="w3-code">' + all_password + '</pre>';
   generateComparison();
 }
 

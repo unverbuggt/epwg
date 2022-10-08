@@ -24,7 +24,7 @@ title: Quelle est mon adresse IP?
 Ce produit inclut les données GeoLite2 créées par MaxMind, disponibles sur [https://www.maxmind.com](https://www.maxmind.com){ target="_blank" }
 {: .w3-small }
 
-Cette page n'a pas encore été entièrement traduite. Voir la version [anglaise](../../ip)
+Cette page n'a pas encore été entièrement traduite. Voir la version [anglaise](../../en/ip)
 
 Toutes les données sont sans garantie.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }

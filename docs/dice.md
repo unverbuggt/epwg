@@ -68,7 +68,7 @@ let defaultOption = document.createElement('option');
 defaultOption.text = 'Wortliste auswählen';
 defaultOption.setAttribute('disabled', 'disabled');
 
-var dicepath = "";
+var dicepath = base_url+"/dice/";
 </script>
 
 <script type="text/javascript" src="dice.js"></script>

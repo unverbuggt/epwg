@@ -1,6 +1,6 @@
 title: epwg.de tools
 
-This is a collection of tools that I always had to search the web for, because I didn't bookmark them.
+This is a collection of tools. Have fun with it.
 If possible they do their job within the web browser, leaving no information on this server.
 More tools to come...
 

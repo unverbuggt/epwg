@@ -1,6 +1,6 @@
 title: l'outils epwg.de
 
-Il s'agit d'une collection d'outils que j'ai toujours dû rechercher sur le Web, car je ne les ai pas mis en signet.
+Il s'agit d'une collection d'outils. Profitez-en bien.
 Si possible, ils font leur travail dans le navigateur Web, ne laissant aucune information sur ce serveur.
 Plus d'outils à venir...
 
