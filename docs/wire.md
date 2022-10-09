@@ -113,7 +113,7 @@ Er verursacht jedoch viermal so hohe Leitungsverluste.
 
 Ist die Leitung zu gering dimensioniert, dann ist der Spannungsabfall vom Netz zum Verbraucher nicht einfach berechenbar.
 Bei gleichem Leistungsbezug aus dem Stromnetz kann der Spannungseinbruch beim Verbraucher je nach Blindstromanteil sogar geringer werden.
-Bei einer solch unterdimensionierten Leitung kann ein Blindstromanteil dazu führen, dass fast keine Leistung am Verbraucher mehr ankommt.
+Bei einer solch unterdimensionierten Leitung kann ein Blindstromanteil dazu führen, dass fast keine Leistung mehr am Verbraucher ankommt.
 
 <script>
 var materials = [
