@@ -49,7 +49,7 @@ plugins:
           Astronomie: Astronomy
           Elektrotechnik: Electrical engineering
   - color-theme:
-      theme_color: '#FF9933'
+      theme_color: '#f65708' #'#FF9933'
   - w3css-classes: {}
   - search:
       lang: de

@@ -210,7 +210,7 @@ function getWordFromList() {
   }
 
   if(diceroll in dictwords) {
-    rollsword_output.innerHTML = '<code id="wordfromlist" onclick="copyToClipboard(\'wordfromlist\');" style="cursor: copy;">' + dictwords[diceroll] + '</code>';
+    rollsword_output.innerHTML = '<code class="w3-codespan" id="wordfromlist" onclick="copyToClipboard(\'wordfromlist\');" style="cursor: copy;">' + dictwords[diceroll] + '</code>';
   } else {
     rollsword_output.innerHTML = sRollNotFound;
   }

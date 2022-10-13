@@ -63,6 +63,7 @@ title: Widerstand einer Leitung
     <label for="wire-vpercent-drop">Spannungsabfall (%)</label>
     <select class="w3-select w3-border w3-theme-l1" name="wire-vpercent-drop" id="wire-vpercent-drop" onclick="calculateCrossSection();">
       <option value="0" disabled selected>-</option>
+      <option value="0.5">0,5</option>
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
