@@ -3,7 +3,7 @@ site_url: https://epwg.de
 site_author: René Rüthlein
 
 theme:
-    name: w3csstheme
+    name: risonia
     manifest: manifest.json
     serviceworker: service-worker.js
     custom_dir: files/
@@ -22,6 +22,8 @@ nav:
       - 'wire.md'
 
 plugins:
+  - search:
+      lang: de
   - i18n:
       default_language: de
       default_language_only: false
@@ -49,10 +51,10 @@ plugins:
           Astronomie: Astronomy
           Elektrotechnik: Electrical engineering
   - color-theme:
-      theme_color: '#f65708' #'#FF9933'
+      theme_color: '#ff9933' #'#FF9933'
+      secondary_color: 'complementary'
   - w3css-classes: {}
-  - search:
-      lang: de
+
 
 markdown_extensions:
     - attr_list
