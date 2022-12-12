@@ -8,6 +8,8 @@ theme:
     serviceworker: service-worker.js
     custom_dir: files/
     logo: img/logo.svg
+    extlink: true
+    extblank: true
 
 nav:
     - 'index.md'
