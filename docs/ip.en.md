@@ -1,12 +1,13 @@
 title: What's my IP Address?
 
+<p>&nbsp;</p>
 <p>
   <strong class="w3-large">IPv6:</strong> 
-  <code class="w3-large" id="ip6" onclick="copyToClipboard('ip6');" style="cursor: copy;">Loading...</code>
+  <code class="w3-large w3-responsive" id="ip6" onclick="copyToClipboard('ip6');" style="cursor: copy;">Loading...</code>
 </p>
 <p>
   <strong class="w3-large">IPv4:</strong> 
-  <code class="w3-large" id="ip4" onclick="copyToClipboard('ip4');" style="cursor: copy;">Loading...</code>
+  <code class="w3-large w3-responsive" id="ip4" onclick="copyToClipboard('ip4');" style="cursor: copy;">Loading...</code>
 </p>
 <div>
   <strong>Location:</strong>
