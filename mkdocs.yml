@@ -10,6 +10,7 @@ theme:
     logo: img/logo.svg
     extlink: true
     extblank: true
+    toc_sidebar: false
 
 nav:
     - 'index.md'
