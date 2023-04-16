@@ -26,7 +26,7 @@ title: Décodage de l'horodatage
   </div>
 </div>
 
-Toutes les données sont sans garantie.
+Toutes les informations fournies sans garantie.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>

@@ -38,7 +38,7 @@ Cet outil contient du code d'[oscat](http://oscat.de/){ target="_blank" } (tradu
   <div class="w3-third" id="sun-day-length">&nbsp;</div>
 </div>
 
-Toutes les données sont sans garantie.
+Toutes les informations fournies sans garantie.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>

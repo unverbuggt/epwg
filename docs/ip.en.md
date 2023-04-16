@@ -60,7 +60,7 @@ from some vendors. This information is normally used to preset you with more loc
 
 Simply use [tor](https://www.torproject.org/download/){ target="_blank" }.
 
-All information is without guarantee.
+All information is given without warranty.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>

@@ -32,7 +32,7 @@ Cet outil contient du code javascript GPLv2 de Claudio Girardi (trouvé [ici](ht
   <div><pre style="margin-top: 0px !important;"><code id="texta"></code></pre></div>
 </div>
 
-Toutes les données sont sans garantie.
+Toutes les informations fournies sans garantie.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>

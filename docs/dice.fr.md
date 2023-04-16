@@ -49,7 +49,7 @@ Si l'on connaît la méthode et qu'on ne la modifie pas, ces mots de passe sont 
 ou `-`{ #bits } Bits  
 **Si** ils avaient vraiment été jetés aux dés...
 
-Toutes les données sont sans garantie.
+Toutes les informations fournies sans garantie.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>

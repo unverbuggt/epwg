@@ -79,7 +79,7 @@ title: Resistance of a conductor
   </div>
 </div>
 
-All information is without guarantee.
+All information is given without warranty.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 ## Why should the voltage drop be low and not exceed 3%?

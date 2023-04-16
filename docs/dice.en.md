@@ -49,7 +49,7 @@ If the method is known these unchanged passwords are at least as safe as:
 or `-`{ #bits } bits  
 **if** they were truly rolled by dice...
 
-All information is without guarantee.
+All information is given without warranty.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-orange }
 
 <script>
