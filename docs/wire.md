@@ -2,7 +2,7 @@ title: Widerstand einer Leitung
 
 <div class="w3-row-padding" style="padding-left: 0px;">
   <div class="w3-quarter">
-    <label for="material">Material</label>
+    <label for="materials">Material</label>
     <select class="w3-select w3-border w3-theme-l1" name="materials" id="materials" onChange="calcWireResistance();"></select>
   </div>
   <div class="w3-quarter">

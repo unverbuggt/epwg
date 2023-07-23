@@ -248,7 +248,10 @@ function generateComparison() {
 }
 
 function getRandomNumberString(max) {
-  return (Math.floor(Math.random() * max)+1).toString();
+  let arr = new Uint32Array(1);
+  self.crypto.getRandomValues(arr);
+  // This jazz is necessary to translate from a random integer to a floating point from 0 to 1
+  return (Math.floor(arr[0]/(0xffffffff + 1) * max)+1).toString();
 }
 
 function getRandomPassword(usechars, characters_count) {

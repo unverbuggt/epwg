@@ -78,7 +78,8 @@ plugins:
       search_index: 'dynamically' #dynamically
       password_button: True
       selfhost: true
-      selfhost_download: false
+      selfhost_download: true
+      selfhost_dir: 'files'
       reload_scripts:
         - '#theme'
       translations:
