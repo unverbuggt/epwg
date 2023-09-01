@@ -2,7 +2,7 @@
 
 {%- block footer_ext %}
   <p class="w3-tiny" style="float:right;">
-  {%- if i18n_config and i18n_page_file_locale %}
+  {%- if i18n_config and i18n_page_locale != "de" %}
     <a href="{{ (i18n_page_locale + '/imprint/') | url }}">Imprint</a>
   {%- else %}
     <a href="{{ 'imprint/' | url }}">Impressum</a>

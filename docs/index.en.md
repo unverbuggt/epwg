@@ -6,15 +6,15 @@ More tools to come...
 
 ## Informatics
 
-[What's my IP Address](ip/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
-[Good password generator](dice/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
-[Decode timestamp](ts/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[What's my IP Address](ip.md){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[Good password generator](dice.md){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[Decode timestamp](ts.md){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 
 ## Astronomy
 
-[When will the sun rise?](sun/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[When will the sun rise?](sun.md){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 
 ## Electrical engineering
 
-[Calculate combination of resistance](resist/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
-[Resistance of a conductor](wire/){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[Calculate combination of resistance](resist.md){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[Resistance of a conductor](wire.md){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }

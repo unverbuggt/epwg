@@ -27,36 +27,43 @@ nav:
 plugins:
   - search:
       lang: de
+
   - i18n:
-      default_language: de
-      default_language_only: false
       docs_structure: suffix
+      fallback_to_default: true
       languages:
-        default:
+        - build: true
+          default: true
+          locale: de
           name: Deutsch
-          build: true
-          site_name: "epwg.de Tools"
-        fr:
+          site_name: epwg.de Tools
+        - build: true
+          default: false
+          locale: fr
           name: Français
-          build: true
-          site_name: "l'outils epwg.de"
-        en:
+          nav_translations:
+            Astronomie: Astronomie
+            Elektrotechnik: Électrotechnique
+            Informatik: Informatique
+          site_name: l'outils epwg.de
+        - build: true
+          default: false
+          locale: en
           name: English
-          build: true
-          site_name: "epwg.de tools"
-      nav_translations:
-        fr:
-          Informatik: Informatique
-          Astronomie: Astronomie
-          Elektrotechnik: Électrotechnique
-        en:
-          Informatik: Informatics
-          Astronomie: Astronomy
-          Elektrotechnik: Electrical engineering
+          nav_translations:
+            Astronomie: Astronomy
+            Elektrotechnik: Electrical engineering
+            Informatik: Informatics
+          site_name: epwg.de tools
+      reconfigure_material: false
+      reconfigure_search: true
+
   - color-theme:
       theme_color: '#ff9933' #'#FF9933'
       secondary_color: 'complementary'
+
   - w3css-classes: {}
+
   - encryptcontent:
       title_prefix: ''
       summary: 'Verschlüsselte Testseite.'
@@ -69,14 +76,15 @@ plugins:
       hljs: False
       arithmatex: False
       mermaid2: False
-      remember_password: true
-      session_storage: true
+      #remember_password: true
+      #session_storage: true
       encrypted_something:
         myNav: [div, id]
         myToc: [div, id]
         myTocButton: [div, id]
       search_index: 'dynamically' #dynamically
       password_button: True
+      webcrypto: true
       selfhost: true
       selfhost_download: true
       selfhost_dir: 'files'
