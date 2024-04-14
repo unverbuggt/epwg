@@ -6,7 +6,7 @@ Plus d'outils à venir...
 
 ## Informatique
 
-[Quelle est mon adresse IP?](ip.de){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
+[Quelle est mon adresse IP?](ip.md){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 [Bon générateur de mot de passe](dice.md){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 [Décodage de l'horodatage](ts.md){ .w3-button .w3-round-xlarge .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 
