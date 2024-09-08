@@ -4,7 +4,6 @@ Dies ist eine Sammlung von Tools. Viel Spaß damit.
 Wenn möglich, erledigen sie ihre Arbeit im Webbrowser und hinterlassen keine Informationen auf diesem Server.
 Weitere Tools folgen...
 
-[Version française](fr/){ .w3-button .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 [English version](en/){ .w3-button .w3-theme-l1 .w3-hover-theme .w3-margin-bottom }
 
 ## Informatik
