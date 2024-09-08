@@ -25,8 +25,8 @@ nav:
       - 'wire.md'
 
 plugins:
-  - search:
-      lang: de
+  #- search:
+  #    lang: de
 
   - i18n:
       docs_structure: suffix
@@ -37,15 +37,15 @@ plugins:
           locale: de
           name: Deutsch
           site_name: epwg.de Tools
-        - build: true
-          default: false
-          locale: fr
-          name: Français
-          nav_translations:
-            Astronomie: Astronomie
-            Elektrotechnik: Électrotechnique
-            Informatik: Informatique
-          site_name: l'outils epwg.de
+      #  - build: true
+      #    default: false
+      #    locale: fr
+      #    name: Français
+      #    nav_translations:
+      #      Astronomie: Astronomie
+      #      Elektrotechnik: Électrotechnique
+      #      Informatik: Informatique
+      #    site_name: l'outils epwg.de
         - build: true
           default: false
           locale: en
