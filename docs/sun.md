@@ -216,13 +216,15 @@ function hoursToNewDate(hours, date) {
   return copiedDate;
 }
 
-//translated to javascript from http://www.oscat.de/
+//originally translated to javascript from http://www.oscat.de/
 
 //this FUNCTION calculates the time when the sun stand exactly south of a given location.
 function sunMidday(longi, date) {
   let t = daysIntoYear(date);
-  let offset = -0.1752 * Math.sin(0.033430 * t + 0.5474) - 0.1340 * Math.sin(0.018234 * t - 0.1939); //https://web.archive.org/web/20200511112651/https://lexikon.astronomie.info/zeitgleichung/
-  let tod = 12.0 - offset - longi * 0.0666666666666;
+  //https://web.archive.org/web/20200511112651/https://lexikon.astronomie.info/zeitgleichung/
+  let offset = (-0.171 * Math.sin(0.0337 * t + 0.465 )) - (0.1299 * Math.sin(0.01787 * t - 0.168 ));
+  //let offset = (-0.1752 * Math.sin(0.033430 * t + 0.5474)) - (0.1340 * Math.sin(0.018234 * t - 0.1939));
+  let tod = 12.0 - offset - (longi / 15);
   return tod;
 }
 
@@ -230,20 +232,26 @@ function sunMidday(longi, date) {
 //for performance reasons the algorithm has been simplified and is accurate within a few minutes only 
 //the times are calculated in utc and have to be corrected for the given time zone
 //this correction is not done within sun_time because it would be a problem on days where dst is enabled or disabled
-function sunTime(lati, longi, date, h = -6) {
-  let b = lati * 0.0174532925199433;
+function sunTime(lati, longi, date) {
+  let b = lati * Math.PI / 180;
   let mid_day = sunMidday(longi, date);
-  let dk = 0.40954 * Math.sin(0.0172 * (daysIntoYear(date) - 79.35));
+  //https://web.archive.org/web/20200511112651/https://lexikon.astronomie.info/zeitgleichung/
+  let dk = 0.4095 * Math.sin(0.016906 * (daysIntoYear(date) - 80.086));
+  //let dk = 0.40954 * Math.sin(0.0172 * (daysIntoYear(date) - 79.35));
+  //let dk = 23.44 * Math.PI / 180 * Math.sin(2 * Math.PI / 365 * (daysIntoYear(date) - 81));
+  //let dk = 23.44 * Math.PI / 180 * Math.sin(2 * Math.PI / 365 * (daysIntoYear(date) - 81));
   let sun_declination = dk * 180 / Math.PI;
   if (sun_declination > 180.0) {
     sun_declination = sun_declination - 360.0;
   }
-  let delta = Math.acos((Math.sin(h * Math.PI / 180) - Math.sin(b) * Math.sin(dk)) / (Math.cos(b) * Math.cos(dk))) * 3.819718632;
-  let delta2 = Math.acos((Math.sin(0 * Math.PI / 180) - Math.sin(b) * Math.sin(dk)) / (Math.cos(b) * Math.cos(dk))) * 3.819718632;
-  let twilight = delta - delta2
-  let sun_rise = mid_day - delta;
-  let sun_set = mid_day + delta;
-  let day_length = 2 * delta2;
+  let delta_end = 12 * Math.acos((Math.sin(-6 * Math.PI / 180) - Math.sin(b) * Math.sin(dk)) / (Math.cos(b) * Math.cos(dk))) / Math.PI;
+  //https://web.archive.org/web/20171008103842/http://lexikon.astronomie.info/zeitgleichung/tagbogen.html
+  //-0.83 Grad = Sonnenaufgang am mathematischen Horizont mit Refraktion
+  let delta_start = 12 * Math.acos((Math.sin(-0.83 * Math.PI / 180) - Math.sin(b) * Math.sin(dk)) / (Math.cos(b) * Math.cos(dk))) / Math.PI;
+  let twilight = delta_end - delta_start
+  let sun_rise = mid_day - delta_start;
+  let sun_set = mid_day + delta_start;
+  let day_length = 2 * delta_start;
   let sunrise = hoursToNewDate(sun_rise, date);
   let midday =  hoursToNewDate(mid_day, date);
   let sunset = hoursToNewDate(sun_set, date);
