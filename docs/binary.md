@@ -55,7 +55,7 @@ title: Binärdarstellung von Zahlen
   </div>
 </div>
 
-Doppelklick auf Feld zum neu berechnen.
+Doppelklick auf ein Feld um den Rest neu zu berechnen.
 {: .w3-panel .w3-theme-l3 .w3-leftbar .w3-rightbar .w3-border-green }
 
 Alle Angaben ohne Gewähr.
@@ -84,25 +84,23 @@ Zahlen die man Speicher findet können dort auch in der jeweils anderen Form auf
 
 ## Ganzzahlen (Integer)
 
-Bei Ganzzahlen werden die Bits in ihrer jeweiligen Zweierpotenz gewertet. Eine Ganzzahl kann keine Nachkommastellen enthalten, daher werden sie in diesem Programm einfach abgeschnitten (statt `23.5` werden nur `23` als Integer kodiert).
+Eine Ganzzahl kann keine Nachkommastellen enthalten, daher werden sie in diesem Programm einfach abgeschnitten (statt `23.5` werden nur `23` als Integer kodiert).
 
-Ganzzahlen ohne Vorzeichen können Zahlen `0` bis `2^Anzahl der Bits - 1` darstellen, also 16-Bit `00 00` bis `FF FF = 2^16 - 1 = 65535` und 32-Bit `00 00  00 00` bis `FF FF  FF FF = 2^32 - 1 = 4294967295`
+Ganzzahlen ohne Vorzeichen können Zahlen `0` bis `2^[Anzahl der Bits] - 1` darstellen, also 16-Bit `00 00` bis `FF FF = 2^16 - 1 = 65535` und 32-Bit `00 00  00 00` bis `FF FF  FF FF = 2^32 - 1 = 4294967295`.
 
-Ist eine Ganzzahl `mit Vorzeichen`, dann kann sie auch negative Zahlen darstellen. Dabei wird die negative Zahl also sog. Zweierkomplement kodiert (alle Bits invertieren und "1" dazu zählen). Diese Darstellung bietet den Vorteil, dass man durch einfache Logikschaltungen neben Addition genauso auch Subtraktion durchführen kann. Das Vorzeichen ist am höchstwertigen Bit (MSB) erkennbar, also wenn das Byte mit der höchsten Potenz mit mit `8-F` an erster Stelle beginnt. Die Zahl `0` hat in dieser Darstellung kein Vorzeichen und der Wertebereich geht um eins weiter ins negative: 16-Bit `80 00 = -32768` bis `7F FF = 32767` und 32-Bit `80 00  00 00 = -2147483648` bis `7F FF  FF FF = 2147483647`.
+Ist eine Ganzzahl `mit Vorzeichen`, dann kann sie auch negative Zahlen darstellen. Dabei wird die negative Zahl also sog. Zweierkomplement kodiert (alle Bits invertieren und "1" addieren). Diese Darstellung bietet den Vorteil, dass man durch einfache Logikschaltungen neben Addition genauso auch Subtraktion durchführen kann. Das Vorzeichen ist am höchstwertigen Bit (MSB) erkennbar, also wenn das Byte mit der höchsten Potenz mit mit `8-F` an erster Stelle beginnt. Die Zahl `0` hat in dieser Darstellung kein Vorzeichen und der Wertebereich geht um eins weiter ins negative: 16-Bit `80 00 = -32768` bis `7F FF = 32767` und 32-Bit `80 00  00 00 = -2147483648` bis `7F FF  FF FF = 2147483647`.
 
 Größere Zahlen sind z.B. auch als 64-Bit Ganzzahlen darstellbar, der Einfachheit halber werden sie durch dieses Programm aktuell aber nicht angezeigt. Wann immer die "Zahl" den Wertebereich `mit Vorzeichen` verlässt wird dies automatisch angepasst. Ist die "Zahl" nicht als 16-Bit bzw. 32-Bit Ganzzahl darstellbar wird `undefined` angezeigt.
 
 ## Gleitkommezahlen (Float)
 
-In den meisten Berechnungen werden statt Ganzzahlen jedoch Gleitkommazahlen benutzt. Diese werden meist in der IEEE-745 Darstellung kodiert. Die Zahl wird dazu so oft durch zwei geteilt bis eine Null vor dem Komma steht. Der Teil nach dem Komma wird dann Mantisse genannt und die Anzahl wie oft durch 2 geteilt wurde wird im Exponenten gespeichert. Mantisse und Exponent werden jeweils mit einer gewissen Anzahl von Bits zusammen mit einem Bit für das Vorzeichen kodiert (mehr dazu auf [hier](https://www.h-schmidt.net/FloatConverter/IEEE754de.html)). 
+In den meisten Berechnungen werden statt Ganzzahlen jedoch Gleitkommazahlen benutzt. Diese werden meist in der IEEE-745 Darstellung kodiert. Die Zahl wird dazu so oft durch zwei geteilt bis eine Null vor dem Komma steht. Der Teil nach dem Komma wird dann Mantisse genannt und die Anzahl wie oft durch 2 geteilt wurde wird im Exponenten gespeichert. Mantisse und Exponent werden jeweils mit einer gewissen Anzahl von Bits zusammen mit einem Bit für das Vorzeichen kodiert (mehr dazu [hier](https://www.h-schmidt.net/FloatConverter/IEEE754de.html)). 
 
 Dabei kann eine reale Zahl nur so genau abgebildet werden wie signifikante Stellen in der Mantisse kodiert werden können (wie viele Bits dafür zur Verfügung stehen), dabei entsteht ein Rundungsfehler. Von der Verwendung von 32-Bit Floats wird eher abgeraten, da dieser Rundungsfehler recht schnell zu Tage tritt (z.B. Doppelklick auf den 32-Bit Float zur Zahl "0.2"). Des weiteren gibt es ein Problem wenn eine kleine Gleitkommazahl mit einer großen addiert werden soll: Dazu müssen die Zahlen auf denselben Exponenten gebracht werden und es gehen dabei zusätzlich Bits in der Mantisse verloren da diese dazu auch mal zwei oder durch zwei gerechnet werden müssen.
 
-Gleitkommazahlen können die Zahl `+0` und `-0` kodieren (auch wenn das keinen direkten Sinn ergibt). Außerdem Kann Unendlich `Infinity`, minus Unendlich `-Infinity` und "garkeine Zahl" `NaN` (Entsteht bei der Interpretation ungültiger Zahlen und bei der Berechnung `0/0`). Mit Unendlich kann direkt weiter gerechnet werden, so ergibt `999 / Infinity` das Ergebnis `0`, jedoch ergibt jede Rechenoperation mit `NaN` erneut keine gültige Zahl.
+Gleitkommazahlen können die Zahl `+0` und `-0` kodieren (auch wenn das keinen direkten Sinn ergibt). Außerdem Kann Unendlich `Infinity`, minus Unendlich `-Infinity` und "garkeine Zahl" `NaN` (Entsteht bei der Interpretation ungültiger Zeichenketten und bei der Berechnung `0/0`). Mit Unendlich kann direkt weiter gerechnet werden, so ergibt `999 / Infinity` das Ergebnis `0`, jedoch ergibt jede Rechenoperation mit `NaN` erneut keine gültige Zahl.
 
 <script>
-var sGetLocation = "Standort ermitteln";
-
 var num = document.getElementById('num');
 var lendian = document.getElementById('lendian');
 var int16 = document.getElementById('int16');

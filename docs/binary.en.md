@@ -63,25 +63,44 @@ All information is given without warranty.
 
 ## Hexadecimal notation
 
-tbt
+The smallest unit of information in a computer system is usually a bit. A bit can only hold the numbers `0` and `1`. Eight bits are called a byte, that is common in most processor or memory architectures.
+As we know from the decade system (were `123` is valued as  `1 * 10^2(=100) + 2 * 10^1(=10) + 3 * 10^0(=1) = 100 + 20 + 3`) the value of a bit in a byte is defined by the power of two (`1010` in binary corresponds to `1 * 2^3(=8) + 0 * 2^2(=4) + 1 * 2^1(=2) + 0 * 2^0(=1) = 8 + 2 = 10` in decimal).
+
+We usually use the hexadecimal notation to simplify the display of a byte. In fact the byte is divided in two halves with four bits each. Four bits can display numbers between `0000 = 0 decimal` and `1111 = 15 decimal`, so there are 16 different states. In addition to the numbers `0-9` the letters `A-F` (they represent the numbers 10 to 15) are used to get 16 symbols (Hexadecimal is a numbers system to the base of sixteen).
+So a byte can be displayed in binary `1010 1111` or simpler as hexadecimal `AF` (`AF` corresponds to `10(=A) * 16^1(=16) + 15(=F) * 16^0(=1) = 160 + 15 = 175` in decimal).
 
 
 ## Byte order (Endianness)
 
-tbt
+The value of each bit in a byte is typically fixed. But a byte can only hold numbers between 0 `00` and 255 `FF`. So the question is how to order multiple bytes to increase the value range.
+
+Internally a processor will mostly calculate with 8-bit, 16-bit (microcontroller), 32-bit or 64-bit (modern processors). This would mean using one, two, four or eight bytes together. Two bytes are called a word, four a dword (double word) and eight a qword.
+
+On the one hand the order of the bytes could be the same as the bits inside a byte. So the leftmost byte would be in the highest power of 256 and the power would decrease from left to right. This order is called "big-endian". Although it seems more logical, it is not overly common in processors (found in SPARC and PowerPC).
+
+On the other hand the bytes could be ordered from the lowest to the highest power of 256 (increase from left to right). This byte order is called "litte-endian" (found in x86 and ARM processors).
+
+But numbers in memory can appear in both byte orders and mixed orders are also possible (e. g. rotated word-wise).
 
 ## Integers
 
-tbt
+Integers cannot contain fractions, that's why this program will simply truncate them (instead of `23.5` only `23` will be encoded as integer).
+
+Unsigned integers can represent the numbers `0` to `2^[number of bits] - 1`, so 16-bit range from `00 00` to `FF FF = 2^16 - 1 = 65535` and 32-bit from `00 00  00 00` to `FF FF  FF FF = 2^32 - 1 = 4294967295`.
+
+If an integer is `signed` then it can describe negative numbers. This is done by encoding negative numbers as two's complement (invert all bits and add "1"). This encoding brings the advantage that simple logic circuits can be used to add or subtract numbers. The sign is visible in the bit with the highest value (MSB), so if the byte with the highest power starts with `8-F` it is a negative number. The number `0` has got no sign and the value range goes one furter to the negative numbers: 16-Bit `80 00 = -32768` to `7F FF = 32767` and 32-Bit `80 00  00 00 = -2147483648` to `7F FF  FF FF = 2147483647`.
+
+Larger numbers can also be represented as 64-bit integers, for example, but for the sake of simplicity they are not currently displayed by this program. Whenever the "number" leaves the value range `signed`, this is automatically adjusted. If the "number" cannot be represented as a 16-bit or 32-bit integer, `undefined` is displayed.
 
 ## Floats
 
-tbt [here](https://www.h-schmidt.net/FloatConverter/IEEE754.html))
+In most calculations, however, floating point numbers are used instead of integers. These are usually coded in the IEEE-745 representation. The number is divided by two until there is a zero in front of the decimal point. The part after the decimal point is then called the mantissa and the number of times it was divided by two is stored in the exponent. The mantissa and exponent are each coded with a certain number of bits together with a bit for the sign (more on this [here](https://www.h-schmidt.net/FloatConverter/IEEE754.html)).
 
+A real number can only be represented as accurately as the significant digits in the mantissa can be encoded (how many bits are available for this), which results in a rounding error. The use of 32-bit floats is not recommended, as this rounding error becomes apparent very quickly (e.g. double-clicking on the 32-bit float for the number "0.2"). There is also a problem when a small floating point number is to be added to a large one: To do this, the numbers must be brought to the same exponent and additional bits in the mantissa are lost because these also have to be multiplied or divided by two.
+
+Floating point numbers can encode the number `+0` and `-0` (even if that doesn't make sense). In addition positive `Infinity`, negative `-Infinity` and "Not a number" `NaN` (results from the interpretation of invalid strings and by calculating `0/0`). You can continue calculating with infinity directly, so `999 / Infinity` calculates to `0`, but every calculation with `NaN` will result in `NaN` again.
 
 <script>
-var sGetLocation = "Standort ermitteln";
-
 var num = document.getElementById('num');
 var lendian = document.getElementById('lendian');
 var int16 = document.getElementById('int16');
