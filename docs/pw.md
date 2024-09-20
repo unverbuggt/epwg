@@ -72,7 +72,7 @@ Um es milde auszudr√ºcken: Jede Webseite, die einen zwingt Kleinbuchstaben, Gro√
 function secondsToString(number) {
     let numlog10 = Math.log(number) / Math.log(10);
     let numlog60 = Math.log(number) / Math.log(60);
-    if (numlog10 < -3) { //<0,0001
+    if (numlog10 < -3) {
         return (number * 1e6).toLocaleString(undefined,{maximumFractionDigits: 0}) + " Nanosekunden";
     } else if (numlog10 < 0) {
         return (number * 1e3).toLocaleString(undefined,{maximumFractionDigits: 0}) + " Millisekunden";
@@ -80,10 +80,14 @@ function secondsToString(number) {
         return (number).toLocaleString(undefined,{maximumFractionDigits: 0}) + " Sekunden";
     } else if (numlog60 < 2) {
         return (number / 60).toLocaleString(undefined,{maximumFractionDigits: 1}) + " Minuten";
-    } else if (numlog60 < 2.8) {
+    } else if (numlog60 < 2.78) {
         return (number / 3600).toLocaleString(undefined,{maximumFractionDigits: 1}) + " Stunden";
-    } else if (numlog60 < 4.2) {
+    } else if (numlog60 < 3.25) {
         return (number / 86400).toLocaleString(undefined,{maximumFractionDigits: 1}) + " Tage";
+    } else if (numlog60 < 3.61) {
+        return (number / 604800).toLocaleString(undefined,{maximumFractionDigits: 1}) + " Wochen";
+    } else if (numlog60 < 4.22) {
+        return (number / 2628000).toLocaleString(undefined,{maximumFractionDigits: 1}) + " Monate";
     } else {
         return (number / 31536000).toLocaleString(undefined,{maximumFractionDigits: 1}) + " Jahre";
     }
