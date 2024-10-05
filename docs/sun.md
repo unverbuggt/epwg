@@ -5,11 +5,11 @@ Dieses Tool enthält Code aus [oscat](http://oscat.de/){ target="_blank" } (übe
 
 <div class="w3-row-padding"  style="padding-left: 0px;">
   <div class="w3-third">
-    <label for="latitude">Breitengrad (° / N+ / S-)</label>
+    <label for="latitude">Breitengrad (° / S- / N+)</label>
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" type="number" name="latitude" id="latitude" onchange="getOSMLink();">
   </div>
   <div class="w3-third">
-    <label for="longitude">Längengrad (° / W+ / O-)</label>
+    <label for="longitude">Längengrad (° / W- / O+)</label>
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" type="number" name="longitude" id="longitude" onchange="getOSMLink();">
   </div>
   <div class="w3-third">

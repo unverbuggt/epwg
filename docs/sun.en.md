@@ -5,11 +5,11 @@ This tool contains code from [oscat](http://oscat.de/){ target="_blank" } (trans
 
 <div class="w3-row-padding" style="padding-left: 0px;">
   <div class="w3-third">
-    <label for="latitude">Latitude (° / N+ / S-)</label>
+    <label for="latitude">Latitude (° / S- / N+)</label>
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" type="number" name="latitude" id="latitude" onchange="getOSMLink();">
   </div>
   <div class="w3-third">
-    <label for="longitude">Longitude (° / W+ / E-)</label>
+    <label for="longitude">Longitude (° / W- / E+)</label>
     <input class="w3-input w3-border w3-hover-theme w3-theme-l1" type="number" name="longitude" id="longitude" onchange="getOSMLink();">
   </div>
   <div class="w3-third">
