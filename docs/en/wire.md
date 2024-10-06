@@ -87,28 +87,28 @@ All information is given without warranty.
 Devices will probably malfunction if the voltage drop is too high after active load is applied on the wire.
 An additional problem arises with AC, because reactive currents gain an increasingly negative effect on energy transmission, if the wire was undersized.
 
-<div class="w3-cell-row">
-  <div class="w3-cell w3-container w3-mobile">
-    <img src="../../wire/cosphi10ud03.svg">
-  </div>
-  <div class="w3-cell w3-container w3-mobile">
-    <img src="../../wire/cosphi05ud03.svg">
-  </div>
-</div>
+/// html | div.w3-cell-row
+//// html | div.w3-cell.w3-container.w3-mobile
+![](wire/cosphi10ud03.svg)
+////
+//// html | div.w3-cell.w3-container.w3-mobile
+![](wire/cosphi05ud03.svg)
+////
+///
 
 If the voltage drop is small, then a consumer will see 223V instead if 230V - that's what all devices should be able to handle.
 In the first plot only active power is transmitted and approx. 70W is lost on the wire respectively converted to heat (that's the consumption of a light bulb!)
 In the second image the current is twice as high due to reactive current.
 The reactive current has no notable influence on the voltage drop, but he causes losses that are four times higher.
 
-<div class="w3-cell-row">
-  <div class="w3-cell w3-container w3-mobile">
-    <img src="../../wire/cosphi10ud15.svg">
-  </div>
-  <div class="w3-cell w3-container w3-mobile">
-    <img src="../../wire/cosphi05ud11.svg">
-  </div>
-</div>
+/// html | div.w3-cell-row
+//// html | div.w3-cell.w3-container.w3-mobile
+![](wire/cosphi10ud15.svg)
+////
+//// html | div.w3-cell.w3-container.w3-mobile
+![](wire/cosphi05ud11.svg)
+////
+///
 
 If the wire was dimmed too low, then the voltage drop from the grid to the consumer isn't easy to calculate.
 At the same active power level drawn from the grid the voltage drop can vary (even be lower) depending on the rective current.
@@ -122,4 +122,4 @@ var materials = [
   {"name": "Gold", "roh20": "0.022", "alpha": "3.9"}
 ];
 </script>
-<script type="text/javascript" src="../../wire/wire.js"></script>
+<script type="text/javascript" src="/wire/wire.js"></script>

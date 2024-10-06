@@ -88,14 +88,14 @@ Geräte funktionieren mglw. nicht mehr richtig, wenn die Spannung zu tief einbri
 Bei Wechsel- oder Drehstrom kommt noch hinzu, dass Blindleistung einen zunehmend negativen Einfluss auf die Energieübertragung hat,
 wenn die Leitung zu gering dimensioniert wurde.
 
-<div class="w3-cell-row">
-  <div class="w3-cell w3-container w3-mobile">
-    <img src="cosphi10ud03.svg">
-  </div>
-  <div class="w3-cell w3-container w3-mobile">
-    <img src="cosphi05ud03.svg">
-  </div>
-</div>
+/// html | div.w3-cell-row
+//// html | div.w3-cell.w3-container.w3-mobile
+![](wire/cosphi10ud03.svg)
+////
+//// html | div.w3-cell.w3-container.w3-mobile
+![](wire/cosphi05ud03.svg)
+////
+///
 
 Ist der Spannungsabfall gering, dann sieht der Verbraucher bei Belastung statt 230V nur 223V - damit sollten alle Geräte klarkommen.
 In der ersten Grafik wird nur Wirkleistung übertragen und ca. 70W gehen auf der Leitung verloren bzw. werden zu Wärme (Das ist der Verbrauch einer Glühbirne!).
@@ -103,14 +103,14 @@ Im zweiten Bild wird durch den Blindstromanteil der Strom verdoppelt.
 Der Blindstrom hat in diesem Fall keinen nennenswerten Einfluss auf den Spannungseinbruch.
 Er verursacht jedoch viermal so hohe Leitungsverluste.
 
-<div class="w3-cell-row">
-  <div class="w3-cell w3-container w3-mobile">
-    <img src="cosphi10ud15.svg">
-  </div>
-  <div class="w3-cell w3-container w3-mobile">
-    <img src="cosphi05ud11.svg">
-  </div>
-</div>
+/// html | div.w3-cell-row
+//// html | div.w3-cell.w3-container.w3-mobile
+![](wire/cosphi10ud15.svg)
+////
+//// html | div.w3-cell.w3-container.w3-mobile
+![](wire/cosphi05ud11.svg)
+////
+///
 
 Ist die Leitung zu gering dimensioniert, dann ist der Spannungsabfall vom Netz zum Verbraucher nicht einfach berechenbar.
 Bei gleichem Leistungsbezug aus dem Stromnetz kann der Spannungseinbruch beim Verbraucher je nach Blindstromanteil sogar geringer werden.
@@ -124,4 +124,4 @@ var materials = [
   {"name": "Gold", "roh20": "0.022", "alpha": "3.9"}
 ];
 </script>
-<script type="text/javascript" src="wire.js"></script>
+<script type="text/javascript" src="/wire/wire.js"></script>
