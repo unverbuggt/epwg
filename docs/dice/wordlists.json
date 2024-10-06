@@ -54,7 +54,7 @@
   "from":"https://x42.com/diceware/diceware-sv.txt"
  },
  {
-  "name":"diceware_latin.txt",
+  "name":"diceware_latin",
   "type":"d5",
   "from":"https://www.theworld.com/~reinhold/diceware_latin.txt.asc"
  },
