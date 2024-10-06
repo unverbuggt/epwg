@@ -2,6 +2,8 @@ site_name: epwg.de tools
 site_url: https://epwg.de
 site_author: René Rüthlein
 
+repo_url: https://github.com/unverbuggt/epwg
+
 theme:
     name: risonia
     manifest: manifest.json
