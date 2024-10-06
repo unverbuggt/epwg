@@ -31,12 +31,12 @@ plugins:
   #    lang: de
 
   - i18n:
-      docs_structure: suffix
+      docs_structure: folder
       fallback_to_default: true
       languages:
-        - build: true
+        - locale: de
           default: true
-          locale: de
+          build: true
           name: Deutsch
           site_name: epwg.de Tools
       #  - build: true
@@ -48,9 +48,9 @@ plugins:
       #      Elektrotechnik: Électrotechnique
       #      Informatik: Informatique
       #    site_name: l'outils epwg.de
-        - build: true
+        - locale: en
           default: false
-          locale: en
+          build: true
           name: English
           nav_translations:
             Astronomie: Astronomy
@@ -58,7 +58,7 @@ plugins:
             Informatik: Informatics
           site_name: epwg.de tools
       reconfigure_material: false
-      reconfigure_search: true
+      reconfigure_search: false
 
   - color-theme:
       theme_color: '#ff9933' #'#FF9933'
