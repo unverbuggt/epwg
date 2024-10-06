@@ -9,7 +9,7 @@ if (strpos($_SERVER['HTTP_REFERER'], 'https://epwg.de') !== 0
 require '../geoip/geoip2.phar';
 use GeoIp2\Database\Reader;
 
-if (strpos($_SERVER['HTTP_REFERER'], 'https://tauri.localhost') == 0) {
+if (strpos($_SERVER['HTTP_REFERER'], 'https://tauri.localhost') === 0) {
    header('Access-Control-Allow-Origin: https://tauri.localhost', false);
 } else {
    header('Access-Control-Allow-Origin: https://epwg.de', false);
