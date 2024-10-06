@@ -34,19 +34,18 @@
  {
   "name":"diceware_german",
   "type":"d5",
-  "from":"http://world.std.com/~reinhold/diceware_german_msfw.txt",
+  "from":"http://world.std.com/%7Ereinhold/diceware_german.txt",
   "pref":"de"
  },
  {
   "name":"diceware_german_msfw",
   "type":"d5",
-  "from":"http://world.std.com/%7Ereinhold/diceware_german.txt"
+  "from":"http://world.std.com/~reinhold/diceware_german_msfw.txt"
  },
-
  {
   "name":"diceware_tr",
   "type":"d5",
-  "from":"https://web.archive.org/web/20110716063648/http://dicewaretr.110mb.com/diceware_tr.txt"
+  "from":"https://github.com/canerbasaran/diceware_tr/raw/refs/heads/master/diceware_tr.txt"
  },
  {
   "name":"diceware-sv",
