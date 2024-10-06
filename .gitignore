@@ -1,7 +1,10 @@
+_raw_dice/*.txt
 site/
 w3css-theme-master/
 reinstall.cmd
 crypto-js-4.1.1.zip
 files/assets/
-docs/imprint*
+docs/de/imprint*
+docs/en/imprint*
 fr_old/docs/imprint*
+epwg.exe
